@@ -8,9 +8,9 @@ class Cubicsdr < Formula
 
   depends_on "cmake" => :build
 
-  depends_on "dohlm/sdr/fftw"
-  depends_on "dohlm/sdr/librtlsdr"
-  depends_on "dohlm/sdr/liquid-dsp"
+  depends_on "dholm/sdr/fftw"
+  depends_on "dholm/sdr/librtlsdr"
+  depends_on "dholm/sdr/liquid-dsp"
   depends_on "pothosware/pothos/soapysdr"
   depends_on "wxwidgets"
 

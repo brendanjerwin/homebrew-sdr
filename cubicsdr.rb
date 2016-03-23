@@ -8,15 +8,15 @@ class Cubicsdr < Formula
 
   depends_on "cmake" => :build
 
-  depends_on "fftw"
-  depends_on "librtlsdr"
-  depends_on "liquid-dsp"
+  depends_on "dohlm/sdr/fftw"
+  depends_on "dohlm/sdr/librtlsdr"
+  depends_on "dohlm/sdr/liquid-dsp"
   depends_on "pothosware/pothos/soapysdr"
   depends_on "wxwidgets"
 
   def install
     mkdir "build" do
-      system "cmake", "..", *std_cmake_args
+      system "cmake", "..", "-DENABLE_DIGITAL_LAB=1", *std_cmake_args
       system "make"
 
       libexec.install Dir["x64/*"]

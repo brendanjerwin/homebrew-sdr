@@ -16,7 +16,7 @@ class Cubicsdr < Formula
 
   def install
     mkdir "build" do
-      system "cmake", "..", *std_cmake_args
+      system "cmake", "..", "-DENABLE_DIGITAL_LAB=1", *std_cmake_args
       system "make"
 
       libexec.install Dir["x64/*"]
